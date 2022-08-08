@@ -1,24 +1,13 @@
-import React from 'react';
-import { ImStatsBars } from 'react-icons/im';
-import { FaRegListAlt } from 'react-icons/fa';
 import { AiOutlineFileDone } from 'react-icons/ai';
-import { Container, Profile, Menu } from './styles';
-import { GradientBtn } from '../Buttons';
+import { FaRegListAlt } from 'react-icons/fa';
+import { ImStatsBars } from 'react-icons/im';
+import { Container, Menu } from './styles';
 
 export default function Sidebar(): JSX.Element {
   return (
     <Container>
-      <Profile>
-        <img src="https://github.com/rodlemos.png" alt="avatar" />
-        <h2>Rodrigo Lemos</h2>
-        <h3>Web Developer</h3>
-        <GradientBtn>
-          <a href="/profile">Editar Perfil</a>
-        </GradientBtn>
-      </Profile>
-
       <Menu>
-        <li className="selected">
+        <li>
           <ImStatsBars size={20} color="white" /> Dashboard
         </li>
         <li>

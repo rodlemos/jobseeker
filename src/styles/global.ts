@@ -8,13 +8,27 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
   }
 
-  h1 {font-weight: 700}
-  h2, h3 {font-weight: 500}
-  input, select {color: ${({ theme }) => theme.colors.text}}
+  html:focus-within {
+  scroll-behavior: smooth;
+  }
+
+  h1,h2,h3,h4,p,a {
+    color: ${({ theme }) => theme.colors.text};
+  }
+
+  h1 {font-weight: 700;}
+  h2, h3 {font-weight: 500;}
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  input, select {color: ${({ theme }) => theme.colors.text};}
   body {display: flex;} 
 
   html, body {
-    min-height: 100vh;
+    height: 100vh;
   }
 
   #__next {
