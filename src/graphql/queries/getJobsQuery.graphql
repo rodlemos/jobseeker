@@ -1,0 +1,22 @@
+query GetJobs {
+  jobs(orderBy: createdAt_DESC) {
+    id
+    location
+    slug
+    title
+    updatedAt
+    logo {
+      url
+    }
+    description {
+      raw
+    }
+    createdAt
+    company {
+      id
+      name
+    }
+    experience
+    contract
+  }
+}

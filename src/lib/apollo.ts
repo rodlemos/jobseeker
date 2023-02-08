@@ -1,9 +1,8 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 
-export const client = new ApolloClient({
-  uri: process.env.GRAPHCMS_API,
-  headers: {
-    Authorization: `Bearer ${process.env.GRAPHCMS_AUTH}`,
-  },
+const client = new ApolloClient({
+  uri: process.env.NEXT_PUBLIC_GRAPHCMS_API,
   cache: new InMemoryCache(),
 });
+
+export default client;

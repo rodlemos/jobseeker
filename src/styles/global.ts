@@ -12,6 +12,10 @@ export const GlobalStyle = createGlobalStyle`
   scroll-behavior: smooth;
   }
 
+  body {
+    background-color: ${({ theme }) => theme.colors.bg};
+  }
+
   h1,h2,h3,h4,p,a {
     color: ${({ theme }) => theme.colors.text};
   }
@@ -24,16 +28,7 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
   
-  input, select {color: ${({ theme }) => theme.colors.text};}
-  body {display: flex;} 
-
-  html, body {
-    height: 100vh;
+  input, select {
+    color: ${({ theme }) => theme.colors.text};
   }
-
-  #__next {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  `;
+`;

@@ -5,13 +5,13 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 25px;
+  padding: 1.5rem;
   border-radius: 15px;
   box-shadow: 0 0 3px #ccc;
   background-color: ${({ theme }) => theme.colors.shape};
 
   span {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: ${({ theme }) => theme.colors.primaryDark};
   }
 

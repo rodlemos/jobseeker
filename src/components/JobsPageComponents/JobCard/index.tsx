@@ -1,22 +1,38 @@
 import React from 'react';
 import { Container } from './styles';
 
-export default function JobCard(): JSX.Element {
+interface Props {
+  job: {
+    id: string;
+    title: string;
+    createdAt: string;
+    logo?: {
+      url: string;
+    };
+    company?: {
+      name: string;
+    };
+    location: string;
+  };
+  onChangeJob: (id: string) => void;
+}
+
+export default function JobCard({ job, onChangeJob }: Props): JSX.Element {
+  const { company, createdAt, location, logo, title } = job;
+  const formattedDate = new Date(createdAt).toLocaleDateString();
+
   return (
-    <Container>
+    <Container onClick={() => onChangeJob(job.id)}>
       <header>
-        <img
-          src="https://media.istockphoto.com/vectors/dent-icon-tooth-logotype-dental-office-logo-vector-illustration-vector-id1065422124?k=6&m=1065422124&s=170667a&w=0&h=IIRXLquSMYX75Ettp6A4QTX6AW0AKi-IUwoHhXJ4Cmw="
-          alt="logo empresa"
-        />
+        <img src={logo.url} alt="logo empresa" />
         <div>
-          <h2>Emprego Parapapá</h2>
-          <h3>Empresa Tchururu</h3>
-          <span>Localidade</span>
+          <h2>{title}</h2>
+          <h3>{company.name}</h3>
+          <span>{location}</span>
         </div>
       </header>
 
-      <span>22/11/2022</span>
+      <span>{formattedDate}</span>
     </Container>
   );
 }

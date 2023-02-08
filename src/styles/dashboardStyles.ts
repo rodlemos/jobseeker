@@ -1,24 +1,30 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  flex: 1;
-  max-height: 100vh;
-  overflow: hidden;
-  background-color: ${({ theme }) => theme.colors.bg};
-`;
-
-export const Flex = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-`;
+export const Container = styled.div``;
 
 export const Content = styled.section`
-  flex: 1;
   display: flex;
+  flex-direction: column;
   gap: 1rem;
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: min(1200px, 100% - 2rem);
   margin-inline: auto;
-  padding: 2rem 0.5rem;
+  padding-block: 2rem;
+
+  @media (min-width: 760px) {
+    flex-direction: row;
+  } ;
+`;
+
+export const Latest = styled.div`
+  margin-top: 1rem;
+  min-height: 200px;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 3px #ccc;
+  background-color: ${({ theme }) => theme.colors.shape};
+
+  @media (min-width: 760px) {
+    min-height: 320px;
+  }
 `;

@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
-  flex: 1;
-  background-color: ${({ theme }) => theme.colors.bg};
-`;
+export const Container = styled.section``;
 
 export const ProfileWrapper = styled.div`
   max-width: 900px;
@@ -26,9 +23,11 @@ export const ProfileBox = styled.div`
   header {
     display: flex;
   }
+
   header img {
     width: 120px;
     height: 120px;
+    border-radius: 4px;
   }
   .photo {
     display: flex;

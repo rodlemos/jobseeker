@@ -5,16 +5,23 @@ export function JobFilters(): JSX.Element {
   return (
     <Container>
       <form>
-        <select>
+        <select name="data" id="data">
           <option>Data do Anúncio</option>
         </select>
 
         <select>
-          <option>Nível de experiência</option>
+          <option hidden>Nível de experiência</option>
+          <option>Todos</option>
+          <option>Júnior</option>
+          <option>Pleno</option>
+          <option>Senior</option>
         </select>
 
         <select>
-          <option>Tipo de Vaga</option>
+          <option hidden>Tipo de Vaga</option>
+          <option>Todos</option>
+          <option>CLT</option>
+          <option>PJ</option>
         </select>
       </form>
     </Container>

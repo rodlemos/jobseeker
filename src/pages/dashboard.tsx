@@ -1,12 +1,14 @@
+import { useSession } from 'next-auth/react';
 import Head from 'next/head';
 import { Header } from '../components/DashboardComponents/Header';
 import { ProfileCard } from '../components/DashboardComponents/ProfileCard';
 import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
-import { Container, Content, Flex } from '../styles/dashboardStyles';
+import { Container, Content, Latest } from '../styles/dashboardStyles';
 
 export default function Dashboard(): JSX.Element {
-  return (
+  const { data: session } = useSession();
+
+  return session ? (
     <Container>
       <Head>
         <title>Myjob | Dashboard</title>
@@ -14,14 +16,15 @@ export default function Dashboard(): JSX.Element {
 
       <Navbar />
 
-      <Flex>
-        <Sidebar />
-
-        <Content>
-          <Header />
-          <ProfileCard />
-        </Content>
-      </Flex>
+      <Content>
+        <main>
+          <Header name={session.user?.name} />
+          <Latest />
+        </main>
+        <ProfileCard name={session.user?.name} avatar={session.user?.image} />
+      </Content>
     </Container>
+  ) : (
+    <span>loading</span>
   );
 }

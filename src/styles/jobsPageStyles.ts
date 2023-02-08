@@ -1,16 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.colors.bg};
   overflow: hidden;
 
   .grid {
     display: grid;
-    max-width: 1200px;
-    max-height: calc(100vh - 100px);
+    width: min(1500px, 100% - 2rem);
+    height: calc(100vh - 100px);
     margin: 20px auto;
     padding: 25px;
     border-radius: 15px;
@@ -61,28 +59,46 @@ export const JobInfo = styled(JobList)`
     background-color: white;
     border-bottom: 1px solid ${({ theme }) => theme.colors.opacity};
   }
+
+  header > div {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  header img {
+    width: 80px;
+    height: 80px;
+  }
+
   header h1 {
     font-size: 1.6rem;
   }
+
   header strong {
     font-size: 1.2rem;
     color: ${({ theme }) => theme.colors.textLight};
   }
+
   header span {
-    display: block
+    display: block;
     font-size: 0.9rem;
     color: ${({ theme }) => theme.colors.textLight};
   }
+
   main {
     margin: 20px 0;
   }
+
   main p {
     font-size: 0.9rem;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
   }
-  main li {
-    padding-left: 20px;
+
+  main ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
   }
+
   main li::marker {
     font-size: 0.7rem;
     color: ${({ theme }) => theme.colors.text};

@@ -1,4 +1,4 @@
-import { Button } from '../components/Buttons';
+import { SecondaryButton } from '../components/Buttons/SecondaryButton';
 import Navbar from '../components/Navbar';
 import { CheckInput } from '../components/ProfilePageComponents/CheckInput';
 import { Input } from '../components/ProfilePageComponents/Input';
@@ -20,7 +20,7 @@ export default function Profile(): JSX.Element {
           <header>
             <div className="photo">
               <img src="https://github.com/rodlemos.png" alt="" />
-              <Button>Editar Foto</Button>
+              <SecondaryButton>Editar Foto</SecondaryButton>
             </div>
 
             <form>

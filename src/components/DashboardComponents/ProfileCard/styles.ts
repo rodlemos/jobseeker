@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  min-width: 280px;
-  max-width: 300px;
+  max-width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,7 +54,7 @@ export const Container = styled.div`
   }
 
   p {
-    padding: 1.5rem 2rem 3rem;
+    padding: 1.5em 1.5em 3em;
     font-size: 0.875rem;
     font-weight: 300;
     color: ${({ theme }) => theme.colors.textLight};
