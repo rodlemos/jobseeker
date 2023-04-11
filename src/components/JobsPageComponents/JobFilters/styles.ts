@@ -6,6 +6,10 @@ export const Container = styled.div`
   padding-inline: 8px;
   margin-top: 1rem;
 
+  @media (min-width: 1024px) {
+    margin-top: 0;
+  }
+
   form {
     width: 100%;
     display: flex;

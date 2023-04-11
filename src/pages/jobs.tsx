@@ -52,13 +52,11 @@ export default function JobsPage(): JSX.Element {
           {current ? (
             <>
               <header>
+                <img src={current.logo.url} alt="Company Logo" />
                 <div>
-                  <img src={current.logo.url} alt="Company Logo" />
-                  <div>
-                    <h1>{current.title}</h1>
-                    <strong>{current.company.name}</strong>
-                    <span>{current.location}</span>
-                  </div>
+                  <h1>{current.title}</h1>
+                  <strong>{current.company.name}</strong>
+                  <span>{current.location}</span>
                 </div>
 
                 <SecondaryButton>

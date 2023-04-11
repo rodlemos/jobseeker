@@ -6,16 +6,17 @@ export const Container = styled.section`
   overflow: hidden;
 
   .grid {
-    @media (min-width: 760px) {
-      width: min(1500px, 100% - 2rem);
+    background-color: ${({ theme }) => theme.colors.shape};
+    width: min(1500px, 100% - 2rem);
+    margin: 20px auto;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0 3px #ccc;
+
+    @media (min-width: 1024px) {
       display: grid;
       height: calc(100vh - 100px);
-      margin: 20px auto;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 0 3px #ccc;
-      background-color: ${({ theme }) => theme.colors.shape};
-      grid-template-columns: 0.8fr 1.2fr;
+      grid-template-columns: 0.7fr 1.3fr;
       grid-template-rows: 40px 1fr;
       column-gap: 10px;
       grid-template-areas:
@@ -52,6 +53,11 @@ export const JobInfo = styled(JobList)`
   display: none;
   grid-area: jobInfo;
   padding: 0 20px 10px;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+
   header {
     display: flex;
     top: 0;
@@ -64,17 +70,17 @@ export const JobInfo = styled(JobList)`
   }
 
   header > div {
-    display: flex;
-    gap: 0.5rem;
+    flex: 1;
+    padding-left: 8px;
   }
 
   header img {
-    width: 80px;
-    height: 80px;
+    width: 72px;
+    height: 72px;
   }
 
   header h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   header strong {
