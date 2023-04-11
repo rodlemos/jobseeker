@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 15px;
   box-shadow: 0 0 3px #ccc;
   background-color: ${({ theme }) => theme.colors.shape};

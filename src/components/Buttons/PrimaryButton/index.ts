@@ -16,7 +16,6 @@ export const PrimaryButton = styled.button`
   cursor: pointer;
   transition: 0.5s;
   a {
-    text-decoration: none;
     color: white;
   }
   &:hover {

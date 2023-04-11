@@ -24,6 +24,10 @@ export const Latest = styled.div`
   box-shadow: 0 0 3px #ccc;
   background-color: ${({ theme }) => theme.colors.shape};
 
+  & > h2 {
+    margin-bottom: 1rem;
+  }
+
   @media (min-width: 760px) {
     min-height: 320px;
   }

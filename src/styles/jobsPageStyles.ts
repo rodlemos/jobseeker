@@ -6,20 +6,22 @@ export const Container = styled.section`
   overflow: hidden;
 
   .grid {
-    display: grid;
-    width: min(1500px, 100% - 2rem);
-    height: calc(100vh - 100px);
-    margin: 20px auto;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 0 3px #ccc;
-    background-color: ${({ theme }) => theme.colors.shape};
-    grid-template-columns: 0.8fr 1.2fr;
-    grid-template-rows: 40px 1fr;
-    column-gap: 10px;
-    grid-template-areas:
-      'jobNav jobNav'
-      'jobList jobInfo';
+    @media (min-width: 760px) {
+      width: min(1500px, 100% - 2rem);
+      display: grid;
+      height: calc(100vh - 100px);
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 3px #ccc;
+      background-color: ${({ theme }) => theme.colors.shape};
+      grid-template-columns: 0.8fr 1.2fr;
+      grid-template-rows: 40px 1fr;
+      column-gap: 10px;
+      grid-template-areas:
+        'jobNav jobNav'
+        'jobList jobInfo';
+    }
   }
 `;
 
@@ -47,6 +49,7 @@ export const JobList = styled.div`
 `;
 
 export const JobInfo = styled(JobList)`
+  display: none;
   grid-area: jobInfo;
   padding: 0 20px 10px;
   header {
@@ -86,7 +89,11 @@ export const JobInfo = styled(JobList)`
   }
 
   main {
-    margin: 20px 0;
+    margin: 2rem 0;
+  }
+
+  main h2 {
+    margin-bottom: 1.5rem;
   }
 
   main p {

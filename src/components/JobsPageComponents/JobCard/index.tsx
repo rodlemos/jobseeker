@@ -14,7 +14,7 @@ interface Props {
     };
     location: string;
   };
-  onChangeJob: (id: string) => void;
+  onChangeJob?: (id: string) => void;
 }
 
 export default function JobCard({ job, onChangeJob }: Props): JSX.Element {

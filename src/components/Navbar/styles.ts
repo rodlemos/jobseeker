@@ -17,12 +17,10 @@ export const Wrapper = styled.div`
   p {
     font-size: 1.2rem;
     color: ${({ theme }) => theme.colors.primary};
-    font-weight: 400;
   }
 
   span {
     color: ${({ theme }) => theme.colors.secundaryDark};
-    font-weight: 500;
   }
 
   .wrapper {
@@ -41,7 +39,6 @@ export const Wrapper = styled.div`
       list-style-type: none;
       text-decoration: none;
       font-size: 1.2rem;
-      font-weight: 500;
       color: ${({ theme }) => theme.colors.textLight};
       transition: 0.2s ease-in;
 
@@ -103,7 +100,6 @@ export const Searchbar = styled.form`
     border: 2px solid ${({ theme }) => theme.colors.opacity};
     border-radius: 3px;
     font-size: 1rem;
-    font-weight: 300;
     outline: transparent;
 
     &::placeholder {

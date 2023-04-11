@@ -1,0 +1,16 @@
+query GetLatestJobs {
+  jobs(orderBy: publishedAt_DESC, last: 4) {
+    id
+    location
+    contract
+    createdAt
+    slug
+    title
+    company {
+      name
+    }
+    logo {
+      url
+    }
+  }
+}

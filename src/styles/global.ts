@@ -21,7 +21,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {font-weight: 700;}
-  h2, h3 {font-weight: 500;}
+  h2, h3 {font-weight: 600;}
+
+  span {font-weight: 300;}
 
   a {
     text-decoration: none;

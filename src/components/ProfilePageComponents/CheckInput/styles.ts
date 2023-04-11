@@ -7,12 +7,15 @@ export const Container = styled.label`
 `;
 
 export const Check = styled.div`
-  width: 100%;
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (min-width: 760px) {
+    flex-direction: row;
+  }
 
   label {
-    width: 100%; //ver se fica melhor com ou sem 100%
     display: inline-flex;
     padding: 10px 20px;
     align-items: center;

@@ -1,35 +1,40 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled(Link)`
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 5px;
+  padding: 1rem 5px;
   border-bottom: 1px solid ${({ theme }) => theme.colors.opacity};
   cursor: pointer;
 
   header {
     display: flex;
-    align-items: center;
     gap: 1rem;
   }
 
   img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
   h2 {
     font-size: 1.1rem;
+    color: ${({ theme }) => theme.colors.primaryDark};
   }
 
-  h3 {
-    font-size: 0.8rem;
-    color: ${({ theme }) => theme.colors.textLight};
+  b {
+    font-weight: 600;
+    color: ${({ theme }) => theme.colors.secundaryDark};
   }
 
   span {
-    font-size: 0.8rem;
+    font-size: 1rem;
+  }
+
+  footer {
+    display: flex;
+    gap: 1rem;
     color: ${({ theme }) => theme.colors.textLight};
   }
 `;
